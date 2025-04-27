@@ -93,7 +93,7 @@ body{
     letter-spacing: 1px;
 }
 #content2 #imgBx{
-    background: url(P1/public/Media/window.jpg);
+    background: url(Media/window.jpg);
     width: 50%;
     background-size: cover;
     background-position: center;
