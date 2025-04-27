@@ -94,6 +94,7 @@ body{
 }
 #content2 #imgBx{
     width: 50%;
+    height: fit-content;
     background-size: cover;
     background-position: center;
 }
