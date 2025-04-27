@@ -23,7 +23,12 @@
     <header id="content1" role="banner" aria-label="Main header">
         <nav id="head" aria-label="Main navigation">
             <a href="#" class="logo" aria-current="page"><span>H</span>alim <span>J</span>r<span>.</span></a>
-            <button class="toggle" aria-label="Toggle navigation menu"></button>
+            <ul id="navigation" class="navigation">
+              <li><a href="#content1" onclick="toggleMenu()">Home</a></li>
+              <li><a href="#content2" onclick="toggleMenu()">About</a></li>
+              <li><a href="#content3" onclick="toggleMenu()">Expertise</a></li>
+              <li><a href="#content4" onclick="toggleMenu()">Technology</a></li>
+          </ul>
         </nav>
         <img src="Media/bg.jpg" alt="Abstract digital background" width="1920" height="1080" loading="eager" decoding="async">
         <div id="content1-1" aria-labelledby="main-heading">
