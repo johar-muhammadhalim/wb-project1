@@ -1,124 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional portfolio of Halim Jr., a skilled web developer and designer specializing in modern web technologies and innovative digital solutions.">
-    <meta name="keywords" content="web developer, web designer, portfolio, frontend, fullstack">
-    
-    <title>Halim Jr. | Web Developer & Designer</title>
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="main.css" as="style">
-    <link rel="preload" href="Media/bg.jpg" as="image">
-    
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional portfolio of Halim Jr., a skilled web developer and designer specializing in modern web technologies and innovative digital solutions.">
+  <meta name="keywords" content="web developer, web designer, portfolio, frontend, fullstack">
+  <title>Halim Jr. | Web Developer & Designer</title>
+  <link rel="preload" href="main.css" as="style">
+  <link rel="preload" href="Media/bg.jpg" as="image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
-    <header id="content1" role="banner" aria-label="Main header">
-        <nav id="head" aria-label="Main navigation">
-            <a href="#" class="logo" aria-current="page"><span>H</span>alim <span>J</span>r<span>.</span></a>
-            <ul id="navigation" class="navigation">
-              <li><a href="#content1" onclick="toggleMenu()">Home</a></li>
-              <li><a href="#content2" onclick="toggleMenu()">About</a></li>
-              <li><a href="#content3" onclick="toggleMenu()">Expertise</a></li>
-              <li><a href="#content4" onclick="toggleMenu()">Technology</a></li>
-          </ul>
-        </nav>
-        <img src="Media/bg.jpg" alt="Abstract digital background" width="1920" height="1080" loading="eager" decoding="async">
-        <div id="content1-1" aria-labelledby="main-heading">
-          <h1 id="main-heading">Innovative Digital Solutions</h1>
-          <p>I craft exceptional digital experiences that combine cutting-edge technology with elegant design. With 5+ years in the industry, I specialize in creating responsive, accessible websites that drive results and exceed client expectations.</p>
-        </div>
-    </header>
-    
-    <main>
-        <section id="content2" aria-labelledby="about-heading">
-            <div id="content2-1">
-                <h2 id="about-heading">About Me</h2>
-                <p>
-                    A passionate full-stack developer with expertise in modern web technologies. 
-                    My approach combines technical precision with creative problem-solving 
-                    to deliver solutions that are both functional and visually stunning. I
-                    thrive on transforming complex challenges into intuitive, 
-                    user-friendly interfaces that make an impact.
-                </p>
-            </div>
-            <div id="imgBx" role="img" aria-label="Professional headshot of Halim Jr."></div>
-        </section>
-        
-        <section id="content3" aria-labelledby="expertise-heading">
-            <div id="content3-1">
-                <h2 id="expertise-heading">My Expertise</h2>
-                <p>I bring a comprehensive skill set to every project, ensuring 
-                    seamless execution from concept to deployment. 
-                    My work is characterized by clean code, pixel-perfect 
-                    designs, and optimized performance that meets the highest 
-                    industry standards</p>
-            </div>
-            <div id="content3-2">
-                <article class="serviceBx" aria-labelledby="design-heading">
-                    <div>
-                        <img src="Media/icon1.png" alt="UI/UX Design icon" width="100" height="100" loading="lazy">
-                        <h3 id="design-heading">Design</h3>
-                        <p class="service-desc">Creating intuitive user interfaces with focus on accessibility</p>
-                    </div>
-                </article>
-                <article class="serviceBx" aria-labelledby="dev-heading">
-                    <div>
-                        <img src="Media/icon2.png" alt="Web Development icon" width="100" height="100" loading="lazy">
-                        <h3 id="dev-heading">Development</h3>
-                        <p class="service-desc">Building responsive websites with modern frameworks</p>
-                    </div>
-                </article>
-                <article class="serviceBx" aria-labelledby="branding-heading">
-                    <div>
-                        <img src="Media/icon3.png" alt="Branding icon" width="100" height="100" loading="lazy">
-                        <h3 id="branding-heading">Branding</h3>
-                        <p class="service-desc">Crafting cohesive digital identities that stand out</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-        
-        <section id="content4" aria-labelledby="tech-heading">
-            <div id="content4-1">
-                <h2 id="tech-heading">We Use Cutting Edge Technology</h2>
-                <p>Our solutions leverage the latest advancements in web development to deliver exceptional performance and user experiences. We specialize in modern frameworks and tools that ensure scalability, security, and lightning-fast load times. From progressive web apps to responsive design principles, we implement technologies that give your digital presence a competitive edge in today's fast-paced market.</p>
-            </div>
-            <div id="tech-imgBx" role="img" aria-label="Technology stack illustration">
-                <img src="Media/tech.png" alt="Modern web technology stack" width="500" height="400" loading="lazy">
-            </div>
-        </section>
-    </main>
-    
-    <footer id="footer" role="contentinfo">
-        <p>&copy; <span id="current-year"></span> Halim Jr. All rights reserved.</p>
-    </footer>
-    
-    <script>
-        // Simple script to update copyright year
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-        
-        // Add intersection observer for lazy loading and animations
-        document.addEventListener('DOMContentLoaded', function() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate');
-                    }
-                });
-            }, { threshold: 0.1 });
-            
-            document.querySelectorAll('.serviceBx').forEach(box => {
-                observer.observe(box);
-            });
-        });
-    </script>
+  <header id="content1" role="banner" aria-label="Main header">
+
+    <nav id="head" aria-label="Main navigation">
+      <a href="#" class="logo" aria-current="page">Halim Jr<span>.</span></a>
+      <ul id="navigation" class="navigation">
+        <li><a href="#content1">Home</a></li>
+        <li><a href="#content2">About</a></li>
+        <li><a href="#content5">Study</a></li> 
+        <li><a href="#content3">Project</a></li>
+        <li><a href="#content4">Skills</a></li>
+      </ul>
+    </nav>
+    <img src="Media/bg.jpg" alt="Abstract digital background" width="1920" height="1080" loading="eager" decoding="async">
+    <div id="content1-1" aria-labelledby="main-heading">
+      <h1 id="main-heading">Innovative Digital Solutions</h1>
+      <p>I craft exceptional digital experiences that combine cutting-edge technology with elegant design...</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="content2" aria-labelledby="about-heading">
+      <div id="content2-1">
+        <h2 id="about-heading">About Me</h2>
+        <p>A passionate full-stack developer with expertise in modern web technologies...</p>
+      </div>
+      <div id="imgBx" role="img" aria-label="Professional headshot of Halim Jr."></div>
+    </section>
+
+    <section id="content5" aria-labelledby="study-heading">
+      <div id="imgBx1" role="UTM Image 1">
+        <img src="Media/UTM_background2.webp" alt="UTM Logo" width="770" height="620" loading="lazy">
+      </div>
+      <div id="content5-1">
+        <h2 id="study-heading">My Study</h2>
+        <p>I am currently pursuing a Bachelor's degree in Computer Science at <span>Universiti Teknologi Malaysia (UTM)</span>...</p>
+      </div>
+      <div id="imgBx2" role="UTM Image 2">
+        <img src="Media/UTM_background.webp" alt="UTM Logo" width="550" height="300" loading="lazy">
+      </div>
+    </section>
+    <section id="content3" aria-labelledby="expertise-heading">
+      <div id="content3-1">
+        <h2 id="expertise-heading">My Project</h2>
+        <p>I bring a comprehensive skill set to every project, ensuring seamless execution from concept to deployment...</p>
+      </div>
+      <div id="content3-2">
+        <article class="serviceBx" aria-labelledby="design-heading">
+          <div>
+            <img src="Media/icon1.png" alt="UI/UX Design icon" width="100" height="100" loading="lazy">
+            <h3 id="design-heading">Design</h3>
+            <p class="service-desc">Creating intuitive user interfaces with focus on accessibility</p>
+          </div>
+        </article>
+        <article class="serviceBx" aria-labelledby="dev-heading">
+          <div>
+            <img src="Media/icon2.png" alt="Web Development icon" width="100" height="100" loading="lazy">
+            <h3 id="dev-heading">Development</h3>
+            <p class="service-desc">Building responsive websites with modern frameworks</p>
+          </div>
+        </article>
+        <article class="serviceBx" aria-labelledby="branding-heading">
+          <div>
+            <img src="Media/icon4.png" alt="Branding icon" width="100" height="100" loading="lazy">
+            <h3 id="branding-heading">Analysis</h3>
+            <p class="service-desc">Crafting cohesive digital identities that stand out</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section id="content4" aria-labelledby="tech-heading">
+      <div id="content4-1">
+        <h2 id="tech-heading">We Use Cutting Edge Technology</h2>
+        <p>Our solutions leverage the latest advancements in web development to deliver exceptional performance...</p>
+      </div>
+      <div id="tech-imgBx" role="img" aria-label="Technology stack illustration">
+        <img src="Media/tech.png" alt="Modern web technology stack" width="350" height="250" loading="lazy">
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" role="contentinfo">
+    <p>&copy; <span id="current-year"></span> Halim Jr. All rights reserved.</p>
+  </footer>
 </body>
 </html>
