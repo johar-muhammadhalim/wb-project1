@@ -12,16 +12,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="main.css">
+  <script src="main.js"></script>
 </head>
 
 <body>
   <header id="header" role="banner" aria-label="Main header">
     <nav id="head" aria-label="Main navigation">
-      <a href="#" class="logo" aria-current="page">Halim Jr<span>.</span></a>
+      <a href="index.html" class="logo" aria-current="page">Halim Jr<span>.</span></a>
       <ul id="navigation" class="navigation">
         <li><a href="index.html">Home</a></li>
-        <li><a href="aboutMe.html">About</a></li>
-        <li><a href="project.html">Project</a></li>
+        <li><a href="aboutMe.html" >About</a></li>
+        <li><a href="project.html" >Project</a></li>
       </ul>
     </nav>
   </header>
@@ -35,11 +36,21 @@
     </section>
     <section id="content4" aria-labelledby="tech-heading">
       <div id="content4-1">
-        <h2 id="tech-heading">We Use Cutting Edge Technology</h2>
-        <p>Our solutions leverage the latest advancements in web development to deliver exceptional performance...</p>
+        <div id="sentences">
+          <h2 id="tech-heading">We Use Cutting Edge Technology</h2>
+          <p>Our solutions leverage the latest advancements in web development to deliver exceptional performance...</p>
+        </div>
+        <div id="pictures-array">
+          <img src="Media/html.png" alt="Web Development icon" width="100" height="100" loading="lazy">
+          <img src="Media/css-3.png" alt="Web Development icon" width="100" height="100" loading="lazy">
+          <img src="Media/java-script.png" alt="Web Development icon" width="100" height="100" loading="lazy">
+          <img src="Media/php.png" alt="Web Development icon" width="100" height="100" loading="lazy">
+          <img src="Media/sql-server.png" alt="Web Development icon" width="100" height="100" loading="lazy">
+          <img src="Media/atom.png" alt="Web Development icon" width="100" height="100" loading="lazy">
+        </div>
       </div>
-      <div id="tech-imgBx" role="img" aria-label="Technology stack illustration">
-        <img src="Media/tech.png" alt="Modern web technology stack" width="350" height="250" loading="lazy">
+      <div id="videoBx">
+        <video id="video" src="Media/bg-vid2.mp4" autoplay loop muted playsinline></video>
       </div>
     </section>
   </main>
