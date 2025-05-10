@@ -275,7 +275,9 @@ h2{
     max-width: 1200px;
     margin: 0 auto;
 }
-
+#content3 #content3-2 a{
+    text-decoration: none;
+}
 #content3 #content3-2 #serviceBx {
     position: relative;
     background: var(--light);
